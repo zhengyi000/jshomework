@@ -7,7 +7,23 @@
 	</head>
 	<body>
 		<script>
-			
+			let a="123"
+			switch(typeof a){
+				case "int":
+					console.log(a*2)
+					break
+				case "string":
+					console.log(a)
+					break
+				case "null":
+					console.log("empty")
+					break
+				case "boolean":
+					console.log("bool")
+					break
+				default:
+					console.log("ERR")
+			}
 		</script>
 	</body>
 </html>

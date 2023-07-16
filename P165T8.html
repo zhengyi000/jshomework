@@ -7,7 +7,22 @@
 	</head>
 	<body>
 		<script>
+			let arr1 = [1, 2, 5, 9, 10];
+			let arr2 = [3, 4, 6, 9, 10];
+			let min = null;
 			
+			for (let i = 0; i < arr1.length; i++) {
+			  for (let j = 0; j < arr2.length; j++) {
+			    if (arr1[i] === arr2[j]) {
+			      if (min === null || arr1[i] < min) {
+			        min = arr1[i];
+			      }
+			    }
+			  }
+			}
+			
+			
+			console.log(min); // 9
 		</script>
 	</body>
 </html>

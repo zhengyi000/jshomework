@@ -7,7 +7,35 @@
 	</head>
 	<body>
 		<script>
-			
+			function getWeekday(dateStr) {
+			  const date = new Date(dateStr);
+			  switch(date.getDay()){
+				  case 0:
+					a="Sunday"
+					break;
+				  case 1:
+					a="Monday"
+					break;
+				  case 2:
+					a="Tuesday"
+					break;
+				  case 3:
+					a="Wednsday"
+					break;
+				  case 4:
+					a="Thursday"
+					break;
+				  case 5:
+					a="Friday"
+					break;
+				  case 6:
+					a="Saturday"
+					break;
+				  default:
+					a="Err"
+			  }
+			  return a
+			}
 		</script>
 	</body>
 </html>

@@ -7,7 +7,10 @@
 	</head>
 	<body>
 		<script>
-			
+			let ipv4Regex = /^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+			let ipv4 = '192.168.0.1';
+			let isIPv4 = ipv4Regex.test(ipv4);
+			console.log(isIPv4); // true
 		</script>
 	</body>
 </html>

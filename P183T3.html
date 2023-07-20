@@ -7,7 +7,8 @@
 	</head>
 	<body>
 		<script>
-			
+			const refreshRate = PerformanceNavigationTiming.toJSON().unloadEventEnd;
+			console.log('浏览器刷新频率：' + refreshRate + 'ms');
 		</script>
 	</body>
 </html>

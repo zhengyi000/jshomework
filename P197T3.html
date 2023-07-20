@@ -4,10 +4,52 @@
 	<head>
 		<title>JS HomeWork</title>
 		<meta charset="utf-8" />
+		<script src="JQ.js"></script>
 	</head>
+	<style>
+		.a {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+			top: 100px;
+			left: 100px;
+		}
+	</style>
 	<body>
+		<div class='a' style="background-color: red;">
+		</div>
+		<div class='a' style="background-color: blue;">
+		</div>
+		<div class='a' style="background-color: green;;">
+		</div>
+		<div class='a' style="background-color: yellow;">
+		</div>
+		<div class='a' style="background-color: purple;">
+		</div>
 		<script>
-			
+			$(function() {
+				const $divs = $('.a');
+				$divs.mousedown(function(event) {
+					const $this = $(this);
+					const startX = event.pageX;
+					const startY = event.pageY;
+					const startLeft = $this.offset().left;
+					const startTop = $this.offset().top;
+					$(document).on('mousemove', function(event) {
+						const moveX = event.pageX - startX;
+						const moveY = event.pageY - startY;
+						$this.css({
+							'left': startLeft + moveX + 'px',
+							'top': startTop + moveY + 'px'
+						});
+					});
+					$(document).on('mouseup', function() {
+						$(document).off('mousemove');
+						$(document).off('mouseup');
+					});
+				});
+			})
 		</script>
 	</body>
 </html>

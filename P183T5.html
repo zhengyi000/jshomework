@@ -4,10 +4,33 @@
 	<head>
 		<title>JS HomeWork</title>
 		<meta charset="utf-8" />
+		<script src="JQ.js"></script>
 	</head>
 	<body>
+		<table id="tb" border="1" cellspacing="0">
+			<tr>
+				<td>111</td>
+				<td>222</td>
+				<td>333</td>
+				<td><a href="javascript:void(0)" class="tda">Del</a></td>
+			</tr>
+			<tr>
+				<td>aaa</td>
+				<td>bbb</td>
+				<td>ccc</td>
+				<td><a href="javascript:void(0)" class="tda">Del</a></td>
+			</tr>
+		</table>
+		<button id="b" >Update</button>
 		<script>
-			
+			$(function (){
+				$("#b").click(function (){
+					$("#tb").append("<tr><td>xxx</td><td>yyy</td><td>zzz</td><a href=\"javascript:void(0)\" class=\"tda\">Del</a></tr>")
+				})
+				$(".tda").click(function (){
+					$("tr").remove()
+				})
+			})
 		</script>
 	</body>
 </html>

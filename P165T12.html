@@ -7,7 +7,9 @@
 	</head>
 	<body>
 		<script>
-			
+			let number = "16867245";
+			let result = number.replace(/(\d)(?=(\d{3})+$)/g, "$1,");
+			console.log(result);
 		</script>
 	</body>
 </html>
